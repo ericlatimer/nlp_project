@@ -1,9 +1,17 @@
 import scala.io.Source
+import scala.util.matching.Regex
 
 val PersonalNameRE = """\b([A-Z][a-zA-Z]+[\\b\s$]([A-Z][a-zA-Z]+)?\b?)""".r
+val PersonalNameRE2 = """\b([A-Z][a-zA-Z]+[\\b\s$]([A-Z][a-zA-Z]+))""".r
+val PersonalNameRE3 = """\b([A-Z][a-z]+[\\b\s$][A-Z][a-z]+)""".r
 
+//Co Mime Meeting
+//((?!reviews).)*reviews
+val PersonalNameRE4 = """\b((?!Meeting\b|Mtg\b|Mtgs\b|Mime\b|Group\b)[A-Z][a-z]+[\\b\s$](?!Meeting\b|Mtg\b|Mtgs\b|Mime\b|Group\b)[A-Z][a-z]+)""".r
 
 //val PersonalNameRE ="""\b([\w\.\']{2,}([\s][\w\.\']{2,})+)\b""".r
+
+val UsingRE = PersonalNameRE3
 
 val dirName = args(0)
 
@@ -14,14 +22,14 @@ for ( file <- fileList) yield {
 
 val document = scala.io.Source.fromFile(file).getLines.toList.mkString(" ")
 
-val first_last = {for {PersonalNameRE(first,last) <- PersonalNameRE findAllIn document} yield (first,last) }.toList
+val first_last = {for {UsingRE(first) <- UsingRE findAllIn document} yield (first) }.toList
 
 var prevIndex = -1
 for (fl <- first_last) yield {
-		val index = document.indexOfSlice(fl._1,prevIndex+1)
-		val length=  fl._1.length
+		val index = document.indexOfSlice(fl,prevIndex+1)
+		val length=  fl.length
 		println(file.getName +  " " + index + " " + length  )
-		//println(document.slice(index,index + length))
+		println(document.slice(index,index + length))
 		prevIndex = index
 }
 //println(file.getName + " " + first_last.length)
