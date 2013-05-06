@@ -5,6 +5,11 @@ import scala.io.Source
 //   -3 letter abbr + full endings
 // adding Day xx?
 // adding \d\d
+
+val DateRE1 = """\b((Mon|Tue|Wed|Thu|Fri|Sat|Sun|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)(day|sday|nesday|rsday|urday|uary|ruary|ch|il|e|y|ust|tember|ober|ember)?)\b""".r
+val DateRE2 = """\b(((Mon|Tue|Wed|Thu|Fri|Sat|Sun|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)(day|sday|nesday|rsday|urday|uary|ruary|ch|il|e|y|ust|tember|ober|ember)?)|(Day \d\d?))\b""".r
+val DateRE3 = """\b(((Mon|Tue|Wed|Thu|Fri|Sat|Sun|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)(day|sday|nesday|rsday|urday|uary|ruary|ch|il|e|y|ust|tember|ober|ember)?)|(Day \d\d?)|([01]\d))\b""".r
+
 val DateRE = """\b(((Mon|Tue|Wed|Thu|Fri|Sat|Sun|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)(day|sday|nesday|rsday|urday|uary|ruary|ch|il|e|y|ust|tember|ober|ember)?)|(Day \d\d?)|((?![01]\d[: ]|:[01]\d)[01]\d))\b""".r
 
 
@@ -15,6 +20,11 @@ val DateRE = """\b(((Mon|Tue|Wed|Thu|Fri|Sat|Sun|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug
 //   - making 1 digit optional in XX:xx PM|AM
 //   - including x(am|pm|AM|PM)
 //   - adding white space (\s?) after \d\d
+
+// val TimeRE1 = """\b(\d\d:\d\d:\d\d)\b""".r
+// val TimeRE2 = """\b((\d\d:\d\d:\d\d)|(\d\d?:\d\d (AM|PM))\b""".r
+// val TimeRE3 = """\b((\d\d:\d\d:\d\d)|(\d\d?:\d\d (AM|PM)?))\b""".r
+
 val TimeRE= """\b((\d\d:\d\d:\d\d)|(\d\d?:\d\d\s?(AM|PM)?)|(\d(am|pm|AM|PM)))\b""".r
 
 
