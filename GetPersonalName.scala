@@ -29,7 +29,7 @@ for (fl <- first_last) yield {
 		val index = document.indexOfSlice(fl,prevIndex+1)
 		val length=  fl.length
 		println(file.getName +  " " + index + " " + length  )
-		println(document.slice(index,index + length))
+		//println(document.slice(index,index + length))
 		prevIndex = index
 }
 //println(file.getName + " " + first_last.length)
