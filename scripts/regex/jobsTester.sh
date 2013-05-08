@@ -1,0 +1,2 @@
+scala scripts/regex/GetProgLang.scala data/repository/data/eric_jobs_train/bunch-2/ > regex.predicted
+scala scripts/regex/GetFScore.scala regex.predicted data/repository/data/eric_jobs_train/job2.labels2

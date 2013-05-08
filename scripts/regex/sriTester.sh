@@ -1,0 +1,2 @@
+scala scripts/regex/GetDateTime.scala data/repository/data/sri-projectWorld/projectWorld4/ > regex.predicted
+scala scripts/regex/GetFScore.scala regex.predicted data/repository/labels/sri-projectWorld/projectWorld4-dates-corrected.env

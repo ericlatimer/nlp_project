@@ -1,0 +1,2 @@
+scala scripts/regex/GetPersonalName.scala data/repository/data/newsgroup_test/bunch3b/ > regex.predicted
+scala scripts/regex/GetFScore.scala regex.predicted data/repository/data/newsgroup_test/bunch3.labels

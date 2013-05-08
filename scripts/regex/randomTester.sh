@@ -1,0 +1,2 @@
+scala scripts/regex/GetPersonalName.scala data/repository/data/random_test/enronBoth/ > regex.predicted
+scala scripts/regex/GetFScore.scala regex.predicted data/repository/data/random_test/enron7-9.labels 
