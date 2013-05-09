@@ -1,3 +1,5 @@
+MINORTHIRD="/u/elatimer/nlp_project/minorthird/"
+
 export CLASSPATH="${CLASSPATH}:.:${MINORTHIRD-.}/class:${MINORTHIRD-.}/lib/*:${MINORTHIRD-.}/lib/minorThirdIncludes.jar"
 export CLASSPATH="${CLASSPATH}:${MINORTHIRD-.}/lib/mixup:${MINORTHIRD-.}/config"
 export MONTYLINGUA="${MINORTHIRD-.}/lib/montylingua"

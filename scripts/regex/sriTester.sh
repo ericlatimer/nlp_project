@@ -1,2 +1,4 @@
-scala scripts/regex/GetDateTime.scala data/repository/data/sri-projectWorld/projectWorld4/ > regex.predicted
-scala scripts/regex/GetFScore.scala regex.predicted data/repository/labels/sri-projectWorld/projectWorld4-dates-corrected.env
+NLP_DIR=/u/elatimer/nlp_project
+
+scala $NLP_DIR/scripts/regex/GetDateTime.scala $NLP_DIR/data/repository/data/sri-projectWorld/projectWorld4/ > $NLP_DIR/regex.predicted
+scala $NLP_DIR/scripts/regex/GetFScore.scala $NLP_DIR/regex.predicted $NLP_DIR/data/repository/labels/sri-projectWorld/projectWorld4-dates-corrected.env

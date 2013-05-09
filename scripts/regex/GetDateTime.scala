@@ -25,8 +25,8 @@ val TimeRE2 = """\b((\d\d:\d\d:\d\d)|(\d\d?:\d\d\s?(AM|PM)))\b""".r
 val TimeRE3 = """\b((\d\d:\d\d:\d\d)|(\d\d?:\d\d\s?(AM|PM)?))\b""".r
 val TimeRE4 = """\b((\d\d:\d\d:\d\d)|(\d\d?:\d\d\s?(AM|PM)?)|(\d(am|pm|AM|PM)))\b""".r
 
-val DateRE = DateRE3
-val TimeRE = TimeRE3
+val DateRE = DateRE4
+val TimeRE = TimeRE4
 
 val dirName = args(0)
 

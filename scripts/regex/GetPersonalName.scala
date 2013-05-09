@@ -11,7 +11,7 @@ val PersonalNameRE4 = """\b((?!Meeting\b|Mtg\b|Mtgs\b|Mime\b|Group\b)[A-Z][a-z]+
 
 //val PersonalNameRE ="""\b([\w\.\']{2,}([\s][\w\.\']{2,})+)\b""".r
 
-val UsingRE = PersonalNameRE3
+val UsingRE = PersonalNameRE4
 
 val dirName = args(0)
 

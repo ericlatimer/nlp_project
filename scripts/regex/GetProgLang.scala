@@ -19,7 +19,7 @@ val ProgLangRE4 = """\b((?!PLAIN|IBM|SMP|CPC|COM|VAX|SYS(TEMS)?|PROJECT|SUN|DOC|
 
 val ProgLangRE5 = """\b(4GL|Access|Ada|Adabas Natural|Assembler|[Aa]ssembly|C\+\+|CICS|COBOL|Cobol|DCL|Distributed  Object  C++|Focus|HTML|IMS|Java|JCL|MF COBOL|MVS JCL|Natural 2|NATURAL 2|Optima ++|PL/1|Power[Bb]uilder|PRO\*Ada|PRO\*C|S/390 assembler|Smalltalk|SQL|VC++|Visual Basic|Visual C++)\b?""".r
 
-val UsingRE = ProgLangRE5
+val UsingRE = ProgLangRE4
 val dirName = args(0)
 
 val fileList = new java.io.File(dirName).listFiles 
