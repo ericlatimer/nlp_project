@@ -1,26 +1,29 @@
 NLP Project README
 ===========
 
-MinorThird is the main program we use for the CRF experiments and it is quite large (100MB+).  We did make changes so you’ll need to use our version.  Also, running our experiments requires ~30MB of data.  You have two options for running it.  Option 1 allows you to simply run the scripts from my account, so no downloading necessary.  Option 2 allows you to download our project folder which contains our modified MinorThird and our dataset and setup your environment and run the scripts.  
+MinorThird is the main program we use for the CRF experiments and it is quite large (100MB+).  We did make changes so you’ll need to use our version.  Also, running our experiments requires ~30MB of data.
+
+You have two options for running it.  Option 1 allows you to simply run the scripts from my account, so no downloading necessary.  Option 2 allows you to download our project folder which contains our modified MinorThird and our dataset and setup your environment and run the scripts.  
 
 Option 1:
 	Run the scripts (no setup required):
 	CRF:
 		$  bash /u/elatimer/nlp_project/scripts/crf/all.sh
-$  bash /u/elatimer/nlp_project/scripts/crf/meetingsTester.sh
-$  bash /u/elatimer/nlp_project/scripts/crf/randomTester.sh
-$  bash /u/elatimer/nlp_project/scripts/crf/newsgroupTester.sh
-$  bash /u/elatimer/nlp_project/scripts/crf/sriTester.sh
-$  bash /u/elatimer/nlp_project/scripts/crf/jobsTester.sh
-RegEx:
-	$  bash /u/elatimer/nlp_project/scripts/regex/all.sh
-	$  bash /u/elatimer/nlp_project/scripts/regex/meetingTester.sh
-$  bash /u/elatimer/nlp_project/scripts/regex/randomTester.sh
-$  bash /u/elatimer/nlp_project/scripts/regex/newsgroupTester.sh
-$  bash /u/elatimer/nlp_project/scripts/regex/sriTester.sh
-$  bash /u/elatimer/nlp_project/scripts/regex/jobsTester.sh
+		$  bash /u/elatimer/nlp_project/scripts/crf/meetingsTester.sh
+		$  bash /u/elatimer/nlp_project/scripts/crf/randomTester.sh
+		$  bash /u/elatimer/nlp_project/scripts/crf/newsgroupTester.sh
+		$  bash /u/elatimer/nlp_project/scripts/crf/sriTester.sh
+		$  bash /u/elatimer/nlp_project/scripts/crf/jobsTester.sh
+	RegEx:
+		$  bash /u/elatimer/nlp_project/scripts/regex/all.sh
+		$  bash /u/elatimer/nlp_project/scripts/regex/meetingTester.sh
+		$  bash /u/elatimer/nlp_project/scripts/regex/randomTester.sh
+		$  bash /u/elatimer/nlp_project/scripts/regex/newsgroupTester.sh
+		$  bash /u/elatimer/nlp_project/scripts/regex/sriTester.sh
+		$  bash /u/elatimer/nlp_project/scripts/regex/jobsTester.sh
 
-At the end of each individual script you will see the overall span recall, precision and F1. The /u/elatimer/nlp_project/results directory contains the predicted spans as well as the standard ouput log.
+	Viewing results:
+		At the end of each individual script you will see the overall span recall, precision and F1. The /u/elatimer/nlp_project/results directory contains the predicted spans as well as the standard ouput log.
 
 Option 2: 
 	Download Project Folder
@@ -36,7 +39,7 @@ Option 2:
 
 	Build MinorThird
 		$ cd minorthird/
-$ ant build
+		$ ant build
 		$ cd ..
 	
 	Edit $MINORTHIRD/config/data.properties
@@ -46,19 +49,20 @@ $ ant build
 	Choose script to run from scripts directory
 		Options:
 			CRF:
-				$ ./scripts/crf/all.sh
-$ ./scripts/crf/meetingsTester.sh
-$ ./scripts/crf/randomTester.sh
-$ ./scripts/crf/newsgroupTester.sh
-$ ./scripts/crf/sriTester.sh
-$ ./scripts/crf/jobsTester.sh
-RegEx:
-	$ ./scripts/regex/all.sh
-	$ ./scripts/regex/meetingTester.sh
-$ ./scripts/regex/randomTester.sh
-$ ./scripts/regex/newsgroupTester.sh
-$ ./scripts/regex/sriTester.sh
-$ ./scripts/regex/jobsTester.sh
+				$ ./local_scripts/crf/all.sh
+				$ ./local_scripts/crf/meetingsTester.sh
+				$ ./local_scripts/crf/randomTester.sh
+				$ ./local_scripts/crf/newsgroupTester.sh
+				$ ./local_scripts/crf/sriTester.sh
+				$ ./local_scripts/crf/jobsTester.sh
+			RegEx:
+				$ ./local_scripts/regex/all.sh
+				$ ./local_scripts/regex/meetingTester.sh
+				$ ./local_scripts/regex/randomTester.sh
+				$ ./local_scripts/regex/newsgroupTester.sh
+				$ ./local_scripts/regex/sriTester.sh
+				$ ./local_scripts/regex/jobsTester.sh
 
-Viewing results:
-	At the end of each individual script you will see the overall span recall, precision and F1. The /u/elatimer/nlp_project/results directory contains the predicted spans as well as the standard ouput log.
+	Viewing results:
+		At the end of each individual script you will see the overall span recall, precision and F1. The /u/elatimer/nlp_project/results directory contains the predicted spans as well as the standard ouput log.
+		
