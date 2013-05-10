@@ -40,9 +40,6 @@ val dates = {for {DateRE(date,_,_,_,_,_) <- DateRE findAllIn document} yield (da
 
 val times = {for {TimeRE(time,_,_,_,_) <- TimeRE findAllIn document} yield (time) }.toList
 
-//val dates = {for {DateRE(date,_,_,_,_,_) <- DateRE findAllIn document} yield (date) }.toList
-
-//val times = {for {TimeRE(time,_,_) <- TimeRE findAllIn document} yield (time) }.toList
 
 var prevIndex = -1
 for (date <- dates) yield {
@@ -50,7 +47,6 @@ for (date <- dates) yield {
 		val length=  date.length
 		
 		println(file.getName +  " " + index + " " + length  )
-		//println(document.slice(index,index + length))
 	
 		prevIndex = index
 }
@@ -61,9 +57,7 @@ for (time <- times) yield{
 	val length = time.length
 
 	println(file.getName +  " " + index + " " + length  )
-	//println(document.slice(index,index + length))
 	prevIndex = index
 }
 
-//println(file.getName + " " + first_last.length)
 }

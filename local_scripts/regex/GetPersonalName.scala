@@ -5,11 +5,8 @@ val PersonalNameRE = """\b([A-Z][a-zA-Z]+[\\b\s$]([A-Z][a-zA-Z]+)?\b?)""".r
 val PersonalNameRE2 = """\b([A-Z][a-zA-Z]+[\\b\s$]([A-Z][a-zA-Z]+))""".r
 val PersonalNameRE3 = """\b([A-Z][a-z]+[\\b\s$][A-Z][a-z]+)""".r
 
-//Co Mime Meeting
-//((?!reviews).)*reviews
 val PersonalNameRE4 = """\b((?!Meeting\b|Mtg\b|Mtgs\b|Mime\b|Group\b)[A-Z][a-z]+[\\b\s$](?!Meeting\b|Mtg\b|Mtgs\b|Mime\b|Group\b)[A-Z][a-z]+)""".r
 
-//val PersonalNameRE ="""\b([\w\.\']{2,}([\s][\w\.\']{2,})+)\b""".r
 
 val UsingRE = PersonalNameRE4
 
@@ -29,10 +26,10 @@ for (fl <- first_last) yield {
 		val index = document.indexOfSlice(fl,prevIndex+1)
 		val length=  fl.length
 		println(file.getName +  " " + index + " " + length  )
-		//println(document.slice(index,index + length))
+		)
 		prevIndex = index
 }
-//println(file.getName + " " + first_last.length)
+
 }
 
 
